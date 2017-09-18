@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/discord-gigantic-stat-checker.iml" filepath="$PROJECT_DIR$/.idea/discord-gigantic-stat-checker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/discord-gigantic-stats-bot.iml" filepath="$PROJECT_DIR$/.idea/discord-gigantic-stats-bot.iml" />
     </modules>
   </component>
 </project>

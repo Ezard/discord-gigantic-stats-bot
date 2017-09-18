@@ -1,5 +1,5 @@
 {
-	"name": "discord-gigantic-stat-checker",
+	"name": "discord-gigantic-stats-bot",
 	"version": "0.0.0",
 	"private": true,
 	"dependencies": {
