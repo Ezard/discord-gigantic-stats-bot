@@ -21,15 +21,17 @@ client.on('message', message => {
 					let json = JSON.parse(rawData);
 					let data = json.data[user];
 
-					const embed = new Discord.RichEmbed();
-					embed.setTitle(user);
-					embed.addField('MMR', Math.round(data.all.total.motiga_skill * 100), true);
-					embed.addField('Level', data.all.total.rank, true);
-					embed.addField('Win Rate', Math.round((data.all.total.wins / data.all.total.total_games) * 100) + '%', true);
-					embed.addField('Games Played', data.all.total.total_games, true);
-					embed.addField('Hours Played', Math.round(data.all.total.time_played / 3600), true);
-					embed.addField('Most Played Hero', getMostPlayedHero(data), true);
-					message.channel.send(embed);
+					if (data) {
+						const embed = new Discord.RichEmbed();
+						embed.setTitle(user);
+						embed.addField('MMR', Math.round(data.all.total.motiga_skill * 100), true);
+						embed.addField('Level', data.all.total.rank, true);
+						embed.addField('Win Rate', Math.round((data.all.total.wins / data.all.total.total_games) * 100) + '%', true);
+						embed.addField('Games Played', data.all.total.total_games, true);
+						embed.addField('Hours Played', Math.round(data.all.total.time_played / 3600), true);
+						embed.addField('Most Played Hero', getMostPlayedHero(data), true);
+						message.channel.send(embed);
+					}
 				});
 			});
 		}
